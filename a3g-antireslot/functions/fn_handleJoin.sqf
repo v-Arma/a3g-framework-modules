@@ -13,3 +13,8 @@ _corpse = nil;
 
 if( !_found ) exitWith {};
 
+_unit setPos ( position _corpse );
+
+// restore gear
+
+// restore agm medical status
