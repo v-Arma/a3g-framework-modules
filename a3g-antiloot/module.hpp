@@ -1,5 +1,5 @@
 #ifdef A3G_Framework_state_Module
-  class A3G_Antiloot {
+  class A3G_AntiLoot {
     name = "Loot prevention and vehicle lock script";
     authors[] = {"Cephei"};
     class Settings {
