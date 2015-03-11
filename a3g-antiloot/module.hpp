@@ -9,7 +9,7 @@
 #endif
 
 #ifdef A3G_Framework_state_Params
-  #include "description.ext"
+  #include "params.hpp"
 #endif
 
 #ifdef A3G_Framework_state_Functions
