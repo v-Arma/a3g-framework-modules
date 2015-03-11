@@ -3,6 +3,7 @@ class A3G_AntiLoot {
     file = "modules\a3g-antiloot\functions";
     class LootLoop {};
     class RemoveLoot {};
+    class SetMode {};
     class SpawnLoops {
       postInit = 1;
     };    
