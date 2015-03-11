@@ -1,0 +1,11 @@
+#ifdef A3G_Framework_state_Module
+  class AutoFail {
+    name = "Automatic Failure";
+    description = "Automatically fails the mission once all players are dead.";
+    authors[] = {"Cephei"};
+  };
+#endif
+
+#ifdef A3G_Framework_state_RespawnTemplates
+  #include "cfgRespawnTemplates.hpp"
+#endif
