@@ -1,6 +1,7 @@
 #ifdef A3G_Framework_state_Module
   class A3G_AntiLoot {
-    name = "Loot prevention and vehicle lock script";
+    name = "Anti Loot";
+    description = "Prevents picking up enemy equipment. Locks AI vehicles for players."
     authors[] = {"Cephei"};
     class Settings {
       #include "settings.hpp"
