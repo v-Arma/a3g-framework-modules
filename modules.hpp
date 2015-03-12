@@ -9,5 +9,3 @@
 */
 
 
-#include "standard-settings\module.hpp"
-#include "a3g-agmdefault\module.hpp"

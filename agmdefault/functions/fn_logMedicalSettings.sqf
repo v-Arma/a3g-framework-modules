@@ -35,4 +35,4 @@ DisableScreams: %15<br/>",
   AGM_Medical_DisableScreams
 ];
 
-player createDiaryRecord["A3G", ["AGM Medical", _string]];
+player createDiaryRecord["A3G-Framework", ["AGM Medical", _string]];
