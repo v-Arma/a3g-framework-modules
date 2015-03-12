@@ -9,4 +9,4 @@ If you're adamant on not using the framework, you have the option of using each 
 The modules are designed to sit in a folder appropriately named `modules` in the mission root directory. Example: `mymission.Takistan\modules\modulename`. That's because you may use quite a few of them, which would very quickly clutter up the mission root folder.
 
 #Contributing
-If you want to add your own module(s) or fix an existing one, fork this repository, make the changes and then make a pull request. See <wiki link> for contribution guidelines.
+If you want to add your own module(s) or fix an existing one, fork this repository, make the changes and then make a pull request. See also [contribution guidelines](https://github.com/a3g/a3g-framework-modules/wiki/How-to-contribute).
