@@ -13,7 +13,20 @@ _corpse = nil;
 
 if( !_found ) exitWith {};
 
-_unit setPos ( position _corpse );
+if ( vehicle _corpse == _corpse ) then {
+  _unit setPos ( position _corpse );
+} else {
+  _unit moveInCargo ( vehicle _corpse );
+};
+
+_unit removeAllWeapons;
+_unit removeAllItems;
+
+_unit addWeapon primaryWeapon _corpse;
+_unit addWeapon secondaryWeapon _corpse;
+_unit addWeapon handgunWeapon _corpse;
+
+
 deleteVehicle _corpse;
 
 /*
