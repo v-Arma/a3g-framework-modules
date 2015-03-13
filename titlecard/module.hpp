@@ -1,7 +1,7 @@
 #ifdef A3G_Framework_state_Module
   class TitleCard {
     name = "Title Card";
-	description = "Displays a nice title card at mission start.";
+    description = "Displays a nice title card at mission start.";
     authors[] = {"Cephei"};
   };
 #endif
