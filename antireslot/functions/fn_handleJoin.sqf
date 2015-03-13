@@ -5,7 +5,7 @@ _found = false;
 _corpse = nil;
 // find matching corpse, if it exists
 {
-  if(_x getVariable "explayeruid" == _uid) then {
+  if(_x getVariable "AntiReslot_var_UID" == _uid) then {
     _found = true;
     _corpse = _x;
   };
@@ -14,6 +14,7 @@ _corpse = nil;
 if( !_found ) exitWith {};
 
 _unit setPos ( position _corpse );
+deleteVehicle _corpse;
 
 /*
 
