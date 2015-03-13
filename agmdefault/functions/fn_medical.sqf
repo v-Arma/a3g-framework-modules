@@ -14,5 +14,3 @@ if( isNil "AGM_Medical_Module" ) then {
 
 // This one is _always_ set, because it's a parameter
 AGM_Medical_MaxUnconsciousnessTime = ["A3G_Template_BleedoutTime", 600] call bis_fnc_getParamValue;
-
-hint "fires";
