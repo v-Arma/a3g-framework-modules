@@ -1,0 +1,1 @@
+AGM_Medical_MaxUnconsciousnessTime = ["AGMBleedParam", 600] call bis_fnc_getParamValue;
