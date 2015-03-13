@@ -1,4 +1,4 @@
-# a3g-framework-modules
+#A3G Framework Modules
 Modules for the [a3g framework](https://github.com/a3g/a3g-framework)
 
 #TLDR
