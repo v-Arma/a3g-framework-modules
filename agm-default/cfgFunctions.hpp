@@ -1,6 +1,6 @@
 class AGMDefault {
   class Functions {
-    file = "modules\agmdefault\functions";
+    file = "modules\agm-default\functions";
     class Medical {
       postInit = 1;
     };

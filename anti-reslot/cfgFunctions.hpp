@@ -1,6 +1,6 @@
 class AntiReslot {
   class Functions {
-    file = "modules\antireslot\functions";
+    file = "modules\anti-reslot\functions";
     class SetEvent {
       postInit = 1;
     };

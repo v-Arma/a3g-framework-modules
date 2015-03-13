@@ -1,7 +1,7 @@
 #ifdef A3G_Framework_state_Module
   class JipTimeLimit {
     name = "JIP Time Limit";
-    description = "Disallows JIPs after a set time."
+    description = "Disallows JIPs after a set time.";
     authors[] = {"Cephei"};
   };
 #endif

@@ -1,7 +1,7 @@
 #ifdef A3G_Framework_state_Module
   class JipTimeLimitParam {
     name = "JIP Time Limit Parameter";
-    description = "Adds a parameter to tweak the JIP Time Limit."
+    description = "Adds a parameter to tweak the JIP Time Limit.";
     authors[] = {"Cephei"};
   };
 #endif

@@ -1,6 +1,6 @@
 class Safezone {
   class Functions {
-    file = "modules\safezone\functions";
+    file = "modules\safe-zone\functions";
     class AssignEvent {
       postInit = 1;
     };

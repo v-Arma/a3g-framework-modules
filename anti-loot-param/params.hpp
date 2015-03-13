@@ -3,6 +3,6 @@ class AntiLootParam {
   values[] = { 0, 1, 2 };
   texts[] = { "No", "Only weapons", "Everything" };
   default = 1;
-  function = "AntiLoot_fnc_SetMode";
+  function = "AntiLootParam_fnc_SetMode";
   isGlobal = 0;
 };

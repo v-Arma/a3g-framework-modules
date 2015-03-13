@@ -1,6 +1,6 @@
 class AGMLog {
   class Functions {
-    file = "modules\agmdefault\functions";
+    file = "modules\agm-log\functions";
     class Log {
       postInit = 1;
     };

@@ -1,6 +1,6 @@
 class AntiLoot {
   class Functions {
-    file = "modules\antiloot\functions";
+    file = "modules\anti-loot\functions";
     class LootLoop {};
     class RemoveLoot {};
     class SpawnLoop {

@@ -1,7 +1,7 @@
 #ifdef A3G_Framework_state_Module
   class AntiLoot {
     name = "Anti Loot";
-    description = "Prevents picking up enemy equipment."
+    description = "Prevents picking up enemy equipment.";
     authors[] = {"Cephei"};
   };
 #endif

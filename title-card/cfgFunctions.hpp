@@ -1,6 +1,6 @@
 class TitleCard {
   class Functions {
-    file = "modules\titlecard\functions";
+    file = "modules\title-card\functions";
     class TitleCard {
       postInit = 1;
     };
