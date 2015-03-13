@@ -13,7 +13,3 @@
 #ifdef A3G_Framework_state_RespawnTemplates
   #include "cfgRespawnTemplates.hpp"
 #endif
-
-#ifdef A3G_Framework_state_Description
-  #include "description.ext"
-#endif
