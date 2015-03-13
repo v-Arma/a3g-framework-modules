@@ -15,15 +15,17 @@ if( !_found ) exitWith {};
 
 _unit setPos ( position _corpse );
 
+/*
+
 // restore gear
 *
 SonixApache's LootBag script 0.1b - Copy all the shit a dead guy has and stuffs it in a box.
 Based on Comfy's Loot Prevention script ( http://pastebin.com/ZqakyDNr )
 */
- 
- 
+/*
+
 if (!isServer) exitWith {};
- 
+
         com_bag =
         {
                 //Set up params, create a box
@@ -37,23 +39,23 @@ if (!isServer) exitWith {};
                 _UnitAssignedItems = assignedItems _unit;
                 _UnitGunItems = primaryWeaponItems _unit;
                 _UnitMagazines = magazines _unit;
-               
+
                 //Fill box with copies of stuff in unit's inventory
                 {_box addItemCargoGlobal [_x,1]} forEach _UnitItems;
                 {_box addItemCargoGlobal [_x,1]} forEach _UnitAssignedItems;
                 {_box addWeaponCargoGlobal [_x,1]} forEach _UnitWeapons;
                 {_box addMagazineCargoGlobal [_x,1]} forEach _UnitMagazines;
-                {_box addItemCargoGlobal [_x,1]} forEach _UnitGunItems;  
+                {_box addItemCargoGlobal [_x,1]} forEach _UnitGunItems;
                 {_box addWeaponCargoGlobal [_x,1]} forEach _UnitRadios;
                 {_box addItemCargoGlobal [_x,1]} forEach _UnitRadios;
-               
+
                 sleep 1;
-               
+
                 //remove remove
                 removeAllWeapons _unit;
                 removeAllItems _unit;
                 removeBackpack _unit;
-                       
+
                 _unit unlinkItem "ItemGPS";
                 _unit unlinkItem "ItemMap";
                 _unit unlinkItem "ItemRadio";
@@ -68,7 +70,7 @@ if (!isServer) exitWith {};
                 removeHeadgear _unit;
                 removeGoggles _unit;
         };
- 
+
 while {true} do
         {
                 sleep 2;
@@ -84,3 +86,4 @@ while {true} do
                         } forEach allUnits;
         };
 // restore agm medical status
+*/
