@@ -1,4 +1,4 @@
-class A3G_AntiReslot {
+class AntiReslot {
   class Functions {
     file = "modules\antireslot\functions";
     class SetEvent {
