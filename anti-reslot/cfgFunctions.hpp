@@ -1,7 +1,7 @@
 class AntiReslot {
   class Functions {
     file = "modules\anti-reslot\functions";
-    class SetEvent {
+    class SetEvents {
       postInit = 1;
     };
     class HandleDisconnect {};
