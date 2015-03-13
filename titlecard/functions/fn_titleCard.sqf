@@ -2,7 +2,7 @@
   [
     [
       [
-        localize "A3G_Framework_str_missionNameShort",
+        getText (missionConfigFile >> "onLoadName"),
         "align = 'center',
         shadow = '1',
         size = '1',
