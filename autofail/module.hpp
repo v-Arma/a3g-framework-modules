@@ -1,7 +1,7 @@
 #ifdef A3G_Framework_state_Module
   class AutoFail {
     name = "Automatic Failure";
-    description = "Automatically fails the mission once all players are dead.";
+    description = "Automatically fails the mission once all players are dead. Prevents respawn.";
     authors[] = {"Cephei"};
   };
 #endif

@@ -1,6 +1,6 @@
-class A3G_AutoFail {
+class AutoFail {
   class Functions {
-    file = "modules\a3g-autofail\functions";
+    file = "modules\autofail\functions";
     class HandleDeath {};
   };
 };

@@ -1,6 +1,6 @@
 class A3G_AntiLoot {
   class Functions {
-    file = "modules\a3g-antiloot\functions";
+    file = "modules\antiloot\functions";
     class LootLoop {};
     class RemoveLoot {};
     class SetMode {};
