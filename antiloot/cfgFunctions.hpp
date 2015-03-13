@@ -1,4 +1,4 @@
-class A3G_AntiLoot {
+class AntiLoot {
   class Functions {
     file = "modules\antiloot\functions";
     class LootLoop {};

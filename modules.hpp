@@ -11,10 +11,13 @@
 
 #include "a3g-loadout\module.hpp"
 #include "a3g-spectator-cam\module.hpp"
+#include "agmbleedout\module.hpp"
 #include "agmdefault\module.hpp"
 #include "antiloot\module.hpp"
+#include "antilootparams\module.hpp"
 #include "antireslot\module.hpp"
 #include "autofail\module.hpp"
 #include "daytime\module.hpp"
+#include "jiptime\module.hpp"
 #include "safezone\module.hpp"
 #include "titlecard\module.hpp"
