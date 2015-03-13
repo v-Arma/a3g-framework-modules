@@ -20,10 +20,10 @@ _shown = if ( count _this > 1 ) then { _this select 1 } else { false };
 _markerName setMarkerAlpha 0;
 
 // Make markers holding array and add the new marker to it
-if( isNil "A3G_Safezone_var_Markers" ) then {
-  A3G_Safezone_var_Markers = [];
+if( isNil "Safezone_var_Markers" ) then {
+  Safezone_var_Markers = [];
 };
-A3G_Safezone_var_Markers pushBack _markerName;
+Safezone_var_Markers pushBack _markerName;
 
 // Clients are done at this point
 if( !isServer ) exitWith { true };

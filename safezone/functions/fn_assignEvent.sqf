@@ -1,3 +1,3 @@
 if ( isDedicated ) exitWith {};
 
-player addEventHandler ["Fired", A3G_Safezone_fnc_SafezoneEH];
+player addEventHandler ["Fired", Safezone_fnc_SafezoneEH];

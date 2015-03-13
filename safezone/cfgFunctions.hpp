@@ -1,6 +1,6 @@
-class A3G_Safezone {
+class Safezone {
   class Functions {
-    file = "modules\a3g-safezone\functions";
+    file = "modules\safezone\functions";
     class AssignEvent {
       postInit = 1;
     };

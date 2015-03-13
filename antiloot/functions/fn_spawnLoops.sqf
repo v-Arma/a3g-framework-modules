@@ -1,4 +1,4 @@
 if ( !isServer ) exitWith {};
 
-[] spawn A3G_AntiLoot_fnc_LootLoop;
-[] spawn A3G_AntiLoot_fnc_VehicleLoop;
+[] spawn AntiLoot_fnc_LootLoop;
+[] spawn AntiLoot_fnc_VehicleLoop;

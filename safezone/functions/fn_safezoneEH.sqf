@@ -1,5 +1,5 @@
 // This is here because safezones might be created dynamically
-if( isNil "A3G_Safezone_var_Markers" ) exitWith {};
+if( isNil "Safezone_var_Markers" ) exitWith {};
 
 private ["_projectile", "_deleted"];
 
@@ -22,7 +22,7 @@ _deleted = false;
       _deleted = true;
     };
   };
-} forEach A3G_Safezone_var_Markers;
+} forEach Safezone_var_Markers;
 
 // Continue tracking projectile in non-scheduled environment
 if( !_deleted ) then {
@@ -37,7 +37,7 @@ if( !_deleted ) then {
           deleteVehicle _projectile;
           _deleted = true;
         };
-      } forEach A3G_Safezone_var_Markers;
+      } forEach Safezone_var_Markers;
       if( _deleted ) exitWith { true };
       false
     };
