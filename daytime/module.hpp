@@ -1,12 +1,13 @@
 #ifdef A3G_Framework_state_Module
-  class ParamTime {
-    name = "Time parameter";
+  class Daytime {
+    name = "Daytime";
+    description = "Adds a parameter to change the time of day in role select."
     authors[] = {"Cephei"};
   };
 #endif
 
 #ifdef A3G_Framework_state_Params
-  class ParamTime {
+  class Daytime {
     title = "Time of day";
     values[] = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23 };
     texts[] = { "12 AM", "1 AM", "2 AM", "3 AM", "4 AM", "5 AM", "6 AM", "7 AM", "8 AM", "9 AM", "10 AM", "11 AM",

@@ -1,5 +1,5 @@
-class AGMSettings {
-  file = "modules\agm-medical-default\functions";
+class AGMDefault {
+  file = "modules\agmdefault\functions";
   class LogMedicalSettings {
     postInit = 1;
   };
