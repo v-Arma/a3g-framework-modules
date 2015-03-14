@@ -1,12 +1,18 @@
+private ["_unit", "_uid"];
+
 _unit = _this select 0;
 _uid = _this select 2; // steam 64
 
 missionNamespace setVariable [format ["AntiReslot_var_%1_UID", _uid], _uid];
-missionNamespace setVariable [format ["AntiReslot_var_%1_position", _uid], position _unit];
+missionNamespace setVariable [format ["AntiReslot_var_%1_position", _uid], getPosASL _unit];
 missionNamespace setVariable [format ["AntiReslot_var_%1_corpse", _uid], _unit];
+missionNamespace setVariable [format ["AntiReslot_var_%1_vehicle", _uid], vehicle _unit];
+missionNamespace setVariable [format ["AntiReslot_var_%1_inVehicle", _uid], vehicle _unit != _unit];
 publicVariable format ["AntiReslot_var_%1_UID", _uid];
 publicVariable format ["AntiReslot_var_%1_position", _uid];
 publicVariable format ["AntiReslot_var_%1_corpse", _uid];
+publicVariable format ["AntiReslot_var_%1_vehicle", _uid];
+publicVariable format ["AntiReslot_var_%1_inVehicle", _uid];
 
 // Containers
 missionNamespace setVariable [format ["AntiReslot_var_%1_uniform", _uid], uniform _unit];

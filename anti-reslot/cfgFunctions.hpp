@@ -9,5 +9,6 @@ class AntiReslot {
       postInit = 1;
     };
     class RestoreState {};
+    class WaitForFreeSlot {};
   };
 };
