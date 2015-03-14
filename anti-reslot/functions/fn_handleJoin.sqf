@@ -1,33 +1,20 @@
-_unit = _this select 0;
-_uid = _this select 2;  // steam 64
+if ( isDedicated ) exitWith {};
+
+_uid = getPlayerUID player;  // steam 64
 
 _found = false;
-_corpse = nil;
-// find matching corpse, if it exists
-{
-  if(_x getVariable "AntiReslot_var_UID" == _uid) then {
-    _found = true;
-    _corpse = _x;
-  };
-} foreach allDeadMen;
-
-if( !_found ) exitWith {};
-
-if ( vehicle _corpse == _corpse ) then {
-  _unit setPos ( position _corpse );
-} else {
-  _unit moveInCargo ( vehicle _corpse );
+if(missionNamespace getVariable format["AntiReslot_var_%1_UID", _uid] == _uid) then {
+  _found = true;
 };
 
-_unit removeAllWeapons;
-_unit removeAllItems;
-
-_unit addWeapon primaryWeapon _corpse;
-_unit addWeapon secondaryWeapon _corpse;
-_unit addWeapon handgunWeapon _corpse;
+if( _found ) then {
+  [player] call AntiReslot_fnc_RestoreState;
+};
 
 
-deleteVehicle _corpse;
+
+
+//deleteVehicle _corpse;
 
 /*
 
