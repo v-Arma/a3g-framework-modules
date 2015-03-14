@@ -1,14 +1,9 @@
-private ["_found", "_uid"];
-
 if ( isDedicated ) exitWith {};
+
+private ["_uid"];
 
 _uid = getPlayerUID player;  // steam 64
 
-_found = false;
-if(missionNamespace getVariable format["AntiReslot_var_%1_UID", _uid] == _uid) then {
-  _found = true;
-};
-
-if( _found ) then {
-  [player] call AntiReslot_fnc_RestoreState;
+if(["UID", _uid] call AntiReslot_fnc_GetLoadoutSegment == _uid) then {
+  [_uid] call AntiReslot_fnc_RestoreState;
 };

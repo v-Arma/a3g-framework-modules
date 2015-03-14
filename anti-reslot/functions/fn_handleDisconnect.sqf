@@ -3,41 +3,31 @@ private ["_unit", "_uid"];
 _unit = _this select 0;
 _uid = _this select 2; // steam 64
 
-missionNamespace setVariable [format ["AntiReslot_var_%1_UID", _uid], _uid];
-missionNamespace setVariable [format ["AntiReslot_var_%1_position", _uid], getPosASL _unit];
-missionNamespace setVariable [format ["AntiReslot_var_%1_corpse", _uid], _unit];
-missionNamespace setVariable [format ["AntiReslot_var_%1_vehicle", _uid], vehicle _unit];
-missionNamespace setVariable [format ["AntiReslot_var_%1_inVehicle", _uid], vehicle _unit != _unit];
-publicVariable format ["AntiReslot_var_%1_UID", _uid];
-publicVariable format ["AntiReslot_var_%1_position", _uid];
-publicVariable format ["AntiReslot_var_%1_corpse", _uid];
-publicVariable format ["AntiReslot_var_%1_vehicle", _uid];
-publicVariable format ["AntiReslot_var_%1_inVehicle", _uid];
+
+// General stuff
+[_uid, "UID", _uid] call AntiReslot_fnc_SaveLoadoutSegment;
+[getPosASL _unit, "posASL", _uid] call AntiReslot_fnc_SaveLoadoutSegment;
+[_unit, "body", _uid] call AntiReslot_fnc_SaveLoadoutSegment;
+[vehicle _unit != _unit, "inVehicle", _uid] call AntiReslot_fnc_SaveLoadoutSegment;
+[vehicle _unit, "vehicle", _uid] call AntiReslot_fnc_SaveLoadoutSegment;
+
 
 // Containers
-missionNamespace setVariable [format ["AntiReslot_var_%1_uniform", _uid], uniform _unit];
-missionNamespace setVariable [format ["AntiReslot_var_%1_vest", _uid], vest _unit];
-missionNamespace setVariable [format ["AntiReslot_var_%1_backpack", _uid], backpack _unit];
-publicVariable format ["AntiReslot_var_%1_uniform", _uid];
-publicVariable format ["AntiReslot_var_%1_vest", _uid];
-publicVariable format ["AntiReslot_var_%1_backpack", _uid];
+[uniform _unit, "uniform", _uid] call AntiReslot_fnc_SaveLoadoutSegment;
+[vest _unit, "vest", _uid] call AntiReslot_fnc_SaveLoadoutSegment;
+[backpack _unit, "backpack", _uid] call AntiReslot_fnc_SaveLoadoutSegment;
 
-// Magazines inside weapons
-missionNamespace setVariable [format ["AntiReslot_var_%1_weaponMagazines", _uid], primaryWeaponMagazine _unit + secondaryWeaponMagazine _unit + handgunMagazine _unit];
-publicVariable format ["AntiReslot_var_%1_weaponMagazines", _uid];
 
-// Weapons
-missionNamespace setVariable [format ["AntiReslot_var_%1_weapons", _uid], weapons _unit];
-publicVariable format ["AntiReslot_var_%1_weapons", _uid];
+// Weapons + loaded magazines
+[weapons _unit, "weapons", _uid] call AntiReslot_fnc_SaveLoadoutSegment;
+[primaryWeaponMagazine _unit + secondaryWeaponMagazine _unit + handgunMagazine _unit, "weaponMagazines", _uid] call AntiReslot_fnc_SaveLoadoutSegment;
+
 
 // Items & Magazines
-missionNamespace setVariable [format ["AntiReslot_var_%1_uniformItems", _uid], uniformItems _unit + uniformMagazines _unit];
-missionNamespace setVariable [format ["AntiReslot_var_%1_vestItems", _uid], vestItems _unit + vestMagazines _unit];
-missionNamespace setVariable [format ["AntiReslot_var_%1_backpackItems", _uid], backpackItems _unit + backpackMagazines _unit];
-publicVariable format ["AntiReslot_var_%1_uniformItems", _uid];
-publicVariable format ["AntiReslot_var_%1_vestItems", _uid];
-publicVariable format ["AntiReslot_var_%1_backpackItems", _uid];
+[uniformItems _unit + uniformMagazines _unit, "uniformItems", _uid] call AntiReslot_fnc_SaveLoadoutSegment;
+[vestItems _unit + vestMagazines _unit, "vestItems", _uid] call AntiReslot_fnc_SaveLoadoutSegment;
+[backpackItems _unit + backpackMagazines _unit, "backpackItems", _uid] call AntiReslot_fnc_SaveLoadoutSegment;
+
 
 // Linked Items
-missionNamespace setVariable [format ["AntiReslot_var_%1_assignedItems", _uid], assignedItems _unit + [headgear _unit] + [goggles _unit]];
-publicVariable format ["AntiReslot_var_%1_assignedItems", _uid];
+[assignedItems _unit + [headgear _unit] + [goggles _unit], "linkedItems", _uid] call AntiReslot_fnc_SaveLoadoutSegment;
