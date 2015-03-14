@@ -1,7 +1,7 @@
 #ifdef A3G_Framework_state_Module
   class AntiReslot {
     name = "Anti Reslot";
-	description = "Teleports JIPs back to where they were when they left and restores their state.";
+	description = "Teleports JIPs back to where they were when they left and restores their state. Effectively prevents reslotting.";
     authors[] = {"Cephei"};
   };
 #endif
