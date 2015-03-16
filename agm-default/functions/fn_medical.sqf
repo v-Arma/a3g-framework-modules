@@ -1,5 +1,3 @@
-private ["_string"];
-
 // Set new default settings for AGM medical, when the user didn't place a medical module
 if( isNil "AGM_Medical_Module" ) then {
   AGM_Medical_CoefNonMedic = 4;
