@@ -1,4 +1,4 @@
-private ["_unit", "_uid", "_holder", "_hasHolder"];
+private ["_unit", "_uid", "_holder"];
 
 _unit = _this select 0;
 _uid = _this select 1;
@@ -7,16 +7,11 @@ _uid = _this select 1;
 // Delete them, then spawn new instances in seperate groundWeaponHolder
 
 // Make sure unit is out of the vehicle, or when the vehicle dies it doesn't matter anymore.
-waitUntil { vehicle _unit == _unit || !alive vehicle _unit };
+waitUntil { vehicle _unit isKindOf "CAManBase" || !alive vehicle _unit };
 
-_hasHolder = false;
 
-// If vehicle died, we just delete the corpse, to make absolutey sure nobody can access their stuff anymore.
-if ( !alive vehicle _unit ) then {
-  deleteVehicle _unit;
-}
 // If unit ejected, then we need to spawn the weapons in the holder
-else {
+if ( vehicle _unit isKindOf "CAManBase" ) then {
   // Save gear again
   [_unit, _uid] call AntiReslot_fnc_SaveGear;
 
@@ -31,9 +26,8 @@ else {
   // Complete workaround by deleting the weapons off the unit before it dies
   _unit removeWeapon ( primaryWeapon _unit );
   _unit removeWeapon ( secondaryWeapon _unit );
-  _hasHolder = true;
+}
+// If vehicle died, we just delete the corpse, to make absolutey sure nobody can access their stuff anymore.
+else {
+  deleteVehicle _unit;
 };
-
-// Write variable into missionNameSpace to determine wether or not a weaponPool is available.
-[_holder, "weaponHolder", _uid] call AntiReslot_fnc_SaveLoadoutSegment;
-[_hasHolder, "hasWeaponHolder", _uid] call AntiReslot_fnc_SaveLoadoutSegment;

@@ -1,4 +1,4 @@
-private ["_uid"];
+private ["_uid", "_uniform", "_vest", "_backpack", "_weaponMagazines", "_weapons", "_uniformItems", "_vestItems", "_backpackItems", "_linkedItems"];
 
 _uid = _this select 0;
 
@@ -28,9 +28,6 @@ _backpackItems = ["backpackItems", _uid] call AntiReslot_fnc_GetLoadoutSegment;
 
 _linkedItems = ["linkedItems", _uid] call AntiReslot_fnc_GetLoadoutSegment;
 
-_hasWeaponHolder = ["hasWeaponHolder", _uid] call AntiReslot_fnc_GetLoadoutSegment;
-_weaponHolder = ["weaponHolder", _uid] call AntiReslot_fnc_GetLoadoutSegment;
-
 
 // Add gear
 // Containers
@@ -38,12 +35,6 @@ player forceAddUniform ( _uniform );
 player addVest ( _vest );
 player addBackpack ( _backpack );
 { player removeItemFromBackpack _x; } forEach backpackItems player;
-
-// Weapon pool
-if ( _hasWeaponHolder ) then {
-  { player addMagazine _x; } forEach magazineCargo _weaponHolder;
-  { player addWeapon _x; } forEach weaponCargo _weaponHolder;
-};
 
 // Weapons + loaded magazines
 { player addMagazine _x; } forEach ( _weaponMagazines );

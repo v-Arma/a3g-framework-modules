@@ -13,12 +13,12 @@ _uid = _this select 1;
 
 
 // Save primary & secondary weapon when the unit is in a vehicle.
-if ( vehicle _unit != _unit ) then {
-  _weapons = weapons _unit;
-  _weaponMagazines = primaryWeaponMagazine _unit + secondaryWeaponMagazine _unit + handgunMagazine _unit;
-} else {
-  _weapons = [handgunWeapon _unit];
+if ( vehicle _unit isKindOf "CAManBase" ) then {
+  _weapons = [handgunWeapon _unit] + [binocular _unit];
   _weaponMagazines = handgunMagazine _unit;
+} else {
+  _weapons = weapons _unit + [binocular _unit];
+  _weaponMagazines = primaryWeaponMagazine _unit + secondaryWeaponMagazine _unit + handgunMagazine _unit;
 };
 
 

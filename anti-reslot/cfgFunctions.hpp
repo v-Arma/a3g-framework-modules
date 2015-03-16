@@ -19,6 +19,7 @@ class AntiReslot {
     file = "modules\anti-reslot\functions\restore";
     class GetLoadoutSegment {};
     class RestoreGear {};
+    class RestoreMedical {};
     class RestorePosition {};
     class RestoreState {};
     class WaitForFreeSlot {};
@@ -27,6 +28,7 @@ class AntiReslot {
   class Save {
     file = "modules\anti-reslot\functions\save";
     class SaveGear {};
+    class SaveMedical {};
     class SaveLoadoutSegment {};
     class HandleWeaponDrop {};
   };    
