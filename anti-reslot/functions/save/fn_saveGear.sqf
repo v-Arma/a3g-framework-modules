@@ -1,4 +1,4 @@
-private ["_unit", "_uid"];
+private ["_unit", "_uid", "_weapons", "_weaponMagazines"];
 
 _unit = _this select 0;
 _uid = _this select 1;
@@ -12,6 +12,16 @@ _uid = _this select 1;
 [vehicle _unit, "vehicle", _uid] call AntiReslot_fnc_SaveLoadoutSegment;
 
 
+// Save primary & secondary weapon when the unit is in a vehicle.
+if ( vehicle _unit != _unit ) then {
+  _weapons = weapons _unit;
+  _weaponMagazines = primaryWeaponMagazine _unit + secondaryWeaponMagazine _unit + handgunMagazine _unit;
+} else {
+  _weapons = [handgunWeapon _unit];
+  _weaponMagazines = handgunMagazine _unit;
+};
+
+
 // Containers
 [uniform _unit, "uniform", _uid] call AntiReslot_fnc_SaveLoadoutSegment;
 [vest _unit, "vest", _uid] call AntiReslot_fnc_SaveLoadoutSegment;
@@ -19,8 +29,8 @@ _uid = _this select 1;
 
 
 // Weapons + loaded magazines
-[weapons _unit, "weapons", _uid] call AntiReslot_fnc_SaveLoadoutSegment;
-[primaryWeaponMagazine _unit + secondaryWeaponMagazine _unit + handgunMagazine _unit, "weaponMagazines", _uid] call AntiReslot_fnc_SaveLoadoutSegment;
+[_weapons, "weapons", _uid] call AntiReslot_fnc_SaveLoadoutSegment;
+[_weaponMagazines, "weaponMagazines", _uid] call AntiReslot_fnc_SaveLoadoutSegment;
 
 
 // Items & Magazines
