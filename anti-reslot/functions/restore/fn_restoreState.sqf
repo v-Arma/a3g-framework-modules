@@ -11,5 +11,8 @@ _uid = _this select 0; // steam 64
 [_uid] call AntiReslot_fnc_RestoreGear;
 
 
-// Delete corpse
+// Delete corpse & weapon pool
 deleteVehicle ( ["body", _uid] call AntiReslot_fnc_GetLoadoutSegment );
+if ( ["hasWeaponHolder", _uid] call AntiReslot_fnc_GetLoadoutSegment ) then {
+  deleteVehicle ["weaponHolder", _uid] call AntiReslot_fnc_GetLoadoutSegment;
+};
