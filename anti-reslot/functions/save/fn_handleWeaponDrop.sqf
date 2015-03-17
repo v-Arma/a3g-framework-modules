@@ -7,13 +7,15 @@ _uid = _this select 1;
 // Delete them, then spawn new instances in seperate groundWeaponHolder
 
 // Make sure unit is out of the vehicle, or when the vehicle dies it doesn't matter anymore.
-waitUntil { vehicle _unit isKindOf "CAManBase" || !alive vehicle _unit };
-
+waitUntil { vehicle _unit isKindOf "CAManBase" };
+// TODO: THIS SHIT IS FUCKED, FIX IT
 
 // If unit ejected, then we need to spawn the weapons in the holder
 if ( vehicle _unit isKindOf "CAManBase" ) then {
   // Save gear again
   [_unit, _uid] call AntiReslot_fnc_SaveGear;
+
+  hint "wrong place";
 
   _holder = createVehicle ["WeaponHolderSimulated", position _unit, [], 0, "CAN_COLLIDE"];
   _holder addWeaponCargoGlobal [primaryWeapon _unit, 1];

@@ -8,7 +8,7 @@ _uid = _this select 1;
 [_uid, "UID", _uid] call AntiReslot_fnc_SaveLoadoutSegment;
 [getPosASL _unit, "posASL", _uid] call AntiReslot_fnc_SaveLoadoutSegment;
 [_unit, "body", _uid] call AntiReslot_fnc_SaveLoadoutSegment;
-[vehicle _unit != _unit, "inVehicle", _uid] call AntiReslot_fnc_SaveLoadoutSegment;
+[!(vehicle _unit isKindOf "CAManBase"), "inVehicle", _uid] call AntiReslot_fnc_SaveLoadoutSegment;
 [vehicle _unit, "vehicle", _uid] call AntiReslot_fnc_SaveLoadoutSegment;
 
 
