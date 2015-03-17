@@ -6,6 +6,10 @@
   };
 #endif
 
+#ifdef A3G_Framework_state_Functions
+  #include "cfgFunctions.hpp"
+#endif
+
 #ifdef A3G_Framework_state_Params
   #include "params.hpp"
 #endif
