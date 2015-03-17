@@ -1,6 +1,6 @@
 class AGMBleedParam {
   class Functions {
-    file = "modules\agmbleedoutparam\functions";
+    file = "modules\agm-bleed-param\functions";
     class ApplyParameter {};
   };
 };
