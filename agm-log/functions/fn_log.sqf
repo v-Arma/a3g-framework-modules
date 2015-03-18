@@ -1,7 +1,11 @@
-private ["_string"];
+private ["_settingsMedical"];
+
+if (!( player diarySubjectExists "A3GFramework" )) then {
+  player createDiarySubject ["A3GFramework", "A3G Framework"];
+};
 
 // Write down medical settings to A3G Framework Diary
-_string = format [
+_settingsMedical = format [
 "<font color='#ff0000'>AGM Medical</font><br/><br/>
 CoefDamage: %1<br/>
 CoefBleeding: %2<br/>
@@ -35,8 +39,22 @@ DisableScreams: %15<br/>",
   AGM_Medical_AutomaticWakeup,
   AGM_Medical_DisableScreams
 ];
+player createDiaryRecord["A3GFramework", ["AGM Medical Settings", _settingsMedical]];
 
-if (!( player diarySubjectExists "A3GFramework" )) then {
-  player createDiarySubject ["A3GFramework", "A3G Framework"];
-};
-player createDiaryRecord["A3GFramework", ["AGM Settings", _string]];
+_settingsFatigue = format [
+"<font color='#ff0000'>AGM Fatigue</font><br/><br/>
+CoefFatigue: %1<br/>
+CoefRecover: %2<br/>",
+AGM_Fatigue_CoefFatigue,
+AGM_Fatigue_CoefRecover
+];
+player createDiaryRecord["A3GFramework", ["AGM Fatigue Settings", _settingsFatigue]];
+
+_settingsExplosive = format [
+"<font color='#ff0000'>AGM Explosive</font><br/><br/>
+RequireSpecialist: %1<br/>
+PunishNonSpecialists: %2<br/>",
+AGM_Explosives_RequireSpecialist,
+AGM_Explosives_PunishNonSpecialists
+];
+player createDiaryRecord["A3GFramework", ["AGM Explosive Settings", _settingsFatigue]];
