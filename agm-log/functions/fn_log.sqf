@@ -1,4 +1,4 @@
-private ["_settingsMedical"];
+private ["_settingsMedical", "_settingsFatigue", "_settingsExplosive"];
 
 if (!( player diarySubjectExists "A3GFramework" )) then {
   player createDiarySubject ["A3GFramework", "A3G Framework"];
@@ -57,4 +57,4 @@ PunishNonSpecialists: %2<br/>",
 AGM_Explosives_RequireSpecialist,
 AGM_Explosives_PunishNonSpecialists
 ];
-player createDiaryRecord["A3GFramework", ["AGM Explosive Settings", _settingsFatigue]];
+player createDiaryRecord["A3GFramework", ["AGM Explosive Settings", _settingsExplosive]];
