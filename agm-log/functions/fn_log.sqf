@@ -41,14 +41,6 @@ AGM_Medical_DisableScreams
 ];
 player createDiaryRecord["A3GFramework", ["AGM Medical Settings", _settingsMedical]];
 
-_settingsFatigue = format [
-"<font color='#ff0000'>AGM Fatigue</font><br/><br/>
-CoefFatigue: %1<br/>
-CoefRecover: %2<br/>",
-AGM_Fatigue_CoefFatigue,
-AGM_Fatigue_CoefRecover
-];
-player createDiaryRecord["A3GFramework", ["AGM Fatigue Settings", _settingsFatigue]];
 
 _settingsExplosive = format [
 "<font color='#ff0000'>AGM Explosive</font><br/><br/>
