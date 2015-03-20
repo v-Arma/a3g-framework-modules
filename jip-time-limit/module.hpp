@@ -3,6 +3,9 @@
     name = "JIP Time Limit";
     description = "Disallows JIPs after a set time.";
     authors[] = {"Cephei"};
+    class Settings {
+      #include "settings.hpp"
+    };
   };
 #endif
 
