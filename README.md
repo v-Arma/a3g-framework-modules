@@ -1,11 +1,17 @@
-#A3G Framework Modules
-Modules for the [a3g framework](https://github.com/a3g/a3g-framework)
+# A3G Framework Modules
+Modules for the [A3G Framework](https://github.com/a3g/a3g-framework)
 
-#TLDR
-Use the [framework](https://github.com/a3g/a3g-framework), it does the complicated stuff for you, all it does is take these modules and apply them correctly.
+## TL;DR
+Use the [A3G Framework](https://github.com/a3g/a3g-framework). All it does is take the modules and enable them for you. You can of course still decide which modules you want to use.
 
-#Manual install
-If you're adamant on not using the framework, you have the option of using each of the modules, or however many you want, without it. Each module has different instructions on how to properly apply them to your mission, which is why they should all have a `README.md` inside their folder. Generally speaking, you just `#include` the files in the appropriate class inside your `description.ext`. So if you have a file named `cfgFunctions.hpp` in the module, include it like this:
+## What do the modules even do?
+Each module should have a `README.md` inside their folder that explains:
+- What it does
+- How and if you can configure it
+- Extra steps necessary to make it work
+
+## Manual Installation
+If you're adamant on not using the framework, you have the option of using the modules without it. Most modules should be simple to use, but they have slightly different instructions on how to enable them. The framework compensates this for you. But if you want to use the modules "stand alone", you'll have to do it yourself. Generally speaking, `#include` all files inside the module folder into the mission config class of the same name. If you have a file named `cfgFunctions.hpp`, it should be included inside `class CfgFunctions {};` inside your `description.ext`. Like this:
 
 ``` c++
 class CfgFunctions {
@@ -13,7 +19,7 @@ class CfgFunctions {
 }
 ```
 
-The modules are designed to sit in a folder appropriately named `modules` in the mission root directory. Example: `mymission.Takistan\modules\modulename`. That's because you may use quite a few of them, which would very quickly clutter up the mission root folder.
+That should generally make them work. If a module for some reason requires extra attention beyond this step. They should have a `README.md` inside their folder explaining what to do. The modules are designed to sit in a folder appropriately named `modules` in the mission root directory. Example: `mymission.Altis\modules\modulename`. That's because you may use quite a few of them, which would very quickly clutter up the mission root folder.
 
-#Contributing
+## Contributing
 If you want to add your own module(s) or fix an existing one, fork this repository, make the changes and then make a pull request. See also [contribution guidelines](https://github.com/a3g/a3g-framework-modules/wiki/Contribution-Guidelines).
