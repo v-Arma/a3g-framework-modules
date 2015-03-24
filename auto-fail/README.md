@@ -1,2 +1,2 @@
-# AGM Bleedout Parameter
-Adds a parameter to change the AGM bleedout time during role select.
+# Auto Fail
+Automatically fails the mission as soon as everyone is dead. Intended to be used with the `BASE` respawn type and a really long respawn time.
