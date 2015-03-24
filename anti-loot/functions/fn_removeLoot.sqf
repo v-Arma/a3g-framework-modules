@@ -1,7 +1,7 @@
 private ["_unit", "_mode"];
 
 _unit = _this select 0;
-_mode = if ( isNil "AntiLoot_var_Mode" ) then { 1 } else { AntiLoot_var_Mode };
+_mode = AntiLoot_var_Mode;
 
 // Mode: 1 = remove weapons only, 2 = remove everything
 switch (_mode) do {
