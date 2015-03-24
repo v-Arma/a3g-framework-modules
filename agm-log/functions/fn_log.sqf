@@ -50,4 +50,4 @@ AGM_Explosives_RequireSpecialist,
 AGM_Explosives_PunishNonSpecialists
 ];
 
-player createDiaryRecord["A3GFramework", ["AGM Settings", _settingsMedical]];
+player createDiaryRecord["A3GFramework", ["AGM Settings", _settings]];
