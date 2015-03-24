@@ -3,6 +3,9 @@
     name = "Anti Loot";
     description = "Prevents picking up enemy equipment.";
     authors[] = {"Cephei"};
+    class Settings {
+      #include "settings.hpp"
+    };
   };
 #endif
 
