@@ -1,4 +1,8 @@
-_missionTitle = if ( isLocalized "A3G_Framework_str_missionNameShort" ) then { localize "A3G_Framework_str_missionNameShort" } else { getText (missionConfigFile >> "onLoadName") };
+_missionTitle = if ( isLocalized "A3GFramework_str_missionNameShort" ) then {
+  localize "A3GFramework_str_missionNameShort"
+} else {
+  getText (missionConfigFile >> "onLoadName")
+};
 
 [
   [
