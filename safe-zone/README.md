@@ -1,2 +1,2 @@
-# AGM Bleedout Parameter
-Adds a parameter to change the AGM bleedout time during role select.
+# Safezone
+A robust safezone system to prevent unfortunate accidents in base and similar situations.
