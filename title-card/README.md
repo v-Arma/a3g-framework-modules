@@ -1,2 +1,2 @@
-# AGM Bleedout Parameter
-Adds a parameter to change the AGM bleedout time during role select.
+# Title Card
+Adds a nice title card to the mission, spelling out mission name and author on mission start again.
