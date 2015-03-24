@@ -1,7 +1,7 @@
 if ( isDedicated ) exitWith {};
 
 _jipTime = if ( isNil "JipTimeLimit_var_JipTime" ) then { 
-  getNumber (missionConfigFile >> "Modules" >> "JipTimeLimit" >> "JipTimeLimit")
+  getNumber (missionConfigFile >> "Modules" >> "JipTimeLimit" >> "JipTimeLimit_var_JipTime")
 } else { 
   JipTimeLimit_var_JipTime
 };
