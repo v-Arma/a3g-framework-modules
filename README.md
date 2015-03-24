@@ -10,6 +10,9 @@ Each module should have a `README.md` inside their folder that explains:
 - How and if you can configure it
 - Extra steps necessary to make it work
 
+## Settings
+Modules which can be configured will have a `settings.hpp` inside their folder. Refer to their `README.md` and the comments inside the `settings.hpp` to the individual descriptions of the settings.
+
 ## Manual Installation
 If you're adamant on not using the framework, you have the option of using the modules without it. Most modules should be simple to use, but they have slightly different instructions on how to enable them. The framework compensates this for you. But if you want to use the modules "stand alone", you'll have to do it yourself. Generally speaking, `#include` all files inside the module folder into the mission config class of the same name. If you have a file named `cfgFunctions.hpp`, it should be included inside `class CfgFunctions {};` inside your `description.ext`. Like this:
 
