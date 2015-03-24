@@ -1,4 +1,4 @@
-#ifdef A3G_Framework_state_Module
+#ifdef A3GFramework_state_Module
   class SafeZone {
     name = "Safe Zone";
     description = "Provides access to a powerful safezone system.";
@@ -6,6 +6,6 @@
   };
 #endif
 
-#ifdef A3G_Framework_state_Functions
+#ifdef A3GFramework_state_Functions
   #include "cfgFunctions.hpp"
 #endif
