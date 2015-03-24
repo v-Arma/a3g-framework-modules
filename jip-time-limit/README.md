@@ -1,2 +1,2 @@
-# AGM Bleedout Parameter
-Adds a parameter to change the AGM bleedout time during role select.
+# JIP Timelimit
+Disallows JIP after a certain time and kills them instead.
