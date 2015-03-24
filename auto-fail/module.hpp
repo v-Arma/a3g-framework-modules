@@ -1,4 +1,4 @@
-#ifdef A3G_Framework_state_Module
+#ifdef A3GFramework_state_Module
   class AutoFail {
     name = "Automatic Failure";
     description = "Automatically fails the mission once all players are dead. Disables respawn.";
@@ -6,10 +6,10 @@
   };
 #endif
 
-#ifdef A3G_Framework_state_Functions
+#ifdef A3GFramework_state_Functions
   #include "cfgFunctions.hpp"
 #endif
 
-#ifdef A3G_Framework_state_RespawnTemplates
+#ifdef A3GFramework_state_RespawnTemplates
   #include "cfgRespawnTemplates.hpp"
 #endif
