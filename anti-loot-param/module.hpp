@@ -1,4 +1,4 @@
-#ifdef A3G_Framework_state_Module
+#ifdef A3GFramework_state_Module
   class AntiLootParam {
     name = "Anti Loot Parameter";
     description = "Adds a parameter to change the anti loot behavior during role select.";
@@ -6,10 +6,10 @@
   };
 #endif
 
-#ifdef A3G_Framework_state_Params
+#ifdef A3GFramework_state_Params
   #include "params.hpp"
 #endif
 
-#ifdef A3G_Framework_state_Functions
+#ifdef A3GFramework_state_Functions
   #include "cfgFunctions.hpp"
 #endif
