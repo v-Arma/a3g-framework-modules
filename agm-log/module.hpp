@@ -1,4 +1,4 @@
-#ifdef A3G_Framework_state_Module
+#ifdef A3GFramework_state_Module
   class AGMLog {
     name = "AGM Logger";
     description = "Logs AGM related information to the briefing section.";
@@ -6,6 +6,6 @@
   };
 #endif
 
-#ifdef A3G_Framework_state_Functions
+#ifdef A3GFramework_state_Functions
   #include "cfgFunctions.hpp"
 #endif
