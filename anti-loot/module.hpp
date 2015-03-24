@@ -1,4 +1,4 @@
-#ifdef A3G_Framework_state_Module
+#ifdef A3GFramework_state_Module
   class AntiLoot {
     name = "Anti Loot";
     description = "Prevents picking up enemy equipment.";
@@ -9,6 +9,6 @@
   };
 #endif
 
-#ifdef A3G_Framework_state_Functions
+#ifdef A3GFramework_state_Functions
   #include "cfgFunctions.hpp"
 #endif
