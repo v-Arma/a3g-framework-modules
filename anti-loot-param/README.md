@@ -1,2 +1,2 @@
-# AGM Bleedout Parameter
-Adds a parameter to change the AGM bleedout time during role select.
+# Anti Loot Parameter
+Adds a parameter to change the anti loot script behavior.
