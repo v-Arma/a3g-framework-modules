@@ -1,5 +1,5 @@
 # A3G Framework Modules
-![Version 1.0](https://img.shields.io/badge/Version-0.9.2-blue.svg)
+![Version 1.0](https://img.shields.io/badge/Version-1.0-blue.svg)
 
 ## TL;DR
 Use the [A3G Framework](https://github.com/a3g/a3g-framework). All it does is take the modules and enable them for you. You can of course still decide which modules you want to use.
