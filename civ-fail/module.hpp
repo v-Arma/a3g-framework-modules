@@ -12,3 +12,7 @@
 #ifdef A3GFramework_state_Functions
   #include "cfgFunctions.hpp"
 #endif
+
+#ifdef A3GFramework_state_Debriefing
+  #include "cfgDebriefing.hpp"
+#endif
