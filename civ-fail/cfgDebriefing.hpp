@@ -4,5 +4,5 @@ class End1 {
 	description = "";
 	pictureBackground = "";
 	picture = "b_inf";
-	pictureColor[] = {0.0,0.3,0.6,1};
+	pictureColor[] = {"(profilenamespace getvariable ['Map_OPFOR_R',0])","(profilenamespace getvariable ['Map_OPFOR_G',1])","(profilenamespace getvariable ['Map_OPFOR_B',1])","(profilenamespace getvariable ['Map_OPFOR_A',0.8])"};
 };
