@@ -1,8 +1,13 @@
-private ["_deathlimit"];
+private ["_deathlimit", "_killer"];
+
+_killer = _this select 1;
 
 if (isNil "CivFail_var_DeathCounter") then {
   CivFail_var_DeathCounter = 0;
 };
+
+// Only count kill if the killer is a player
+if (!isPlayer _killer) exitWith {};
 
 CivFail_var_DeathCounter = CivFail_var_DeathCounter + 1;
 
