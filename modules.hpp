@@ -15,6 +15,7 @@
 #include "anti-loot-param\module.hpp"
 #include "anti-vehicle-steal\module.hpp"
 #include "auto-fail\module.hpp"
+#include "civ-fail\module.hpp"
 #include "daytime-param\module.hpp"
 #include "jip-time-limit\module.hpp"
 #include "jip-time-limit-param\module.hpp"
