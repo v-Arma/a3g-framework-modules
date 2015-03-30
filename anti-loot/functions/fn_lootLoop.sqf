@@ -1,7 +1,5 @@
 private ["_allAi"];
 
-AntiLoot_var_Mode = getNumber (missionConfigFile >> "Modules" >> "AntiLoot" >> "Settings" >> "AntiLoot_var_Mode");
-
 while { true } do {
   _allAi = allUnits - ( playableUnits + switchableUnits );
   {
