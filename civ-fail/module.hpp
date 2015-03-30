@@ -16,3 +16,7 @@
 #ifdef A3GFramework_state_Debriefing
   #include "cfgDebriefing.hpp"
 #endif
+
+#ifdef A3GFramework_state_Notifications
+  #include "cfgNotifications.hpp"
+#endif
