@@ -5,7 +5,7 @@ _mode = if (isNil "AntiLoot_var_Mode") then {
   getNumber (missionConfigFile >> "Modules" >> "AntiLoot" >> "Settings" >> "AntiLoot_var_Mode")
 } else {
   AntiLoot_var_Mode
-}
+};
 
 // Mode: 1 = remove weapons only, 2 = remove everything
 switch (_mode) do {
