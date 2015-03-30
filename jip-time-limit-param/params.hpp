@@ -4,5 +4,5 @@ class JipTimeLimitParam {
   texts[] = { "1 minute", "2 minutes", "3 minutes", "4 minutes", "5 minutes", "10 minutes", "Never" };
   default = 600;
   function = "JipTimeLimitParam_fnc_SetJipTimeLimit";
-  isGlobal = 0;
+  isGlobal = 1;
 };
