@@ -1,5 +1,5 @@
 class CivFail {
-  title = "Killed a Civilian";
+  title = "Violation of ROE";
   //iconPicture = "\a3\Ui_F_Curator\Data\CfgMarkers\kia_ca.paa";
   iconText = "%2";
   description = "%1";
