@@ -1,5 +1,7 @@
 private ["_allAi"];
 
+CivFail_var_DeathCounter = 0;
+
 while { true } do {
   _allAi = allUnits - ( playableUnits + switchableUnits );
   {
