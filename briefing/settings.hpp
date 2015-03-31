@@ -1,3 +1,7 @@
+class Everyone {
+  
+};
+
 class Blufor {
   
 };
