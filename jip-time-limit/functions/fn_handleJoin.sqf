@@ -7,5 +7,5 @@ _jipTime = if ( isNil "JipTimeLimit_var_JipTime" ) then {
 };
 
 if ( time > _jipTime && _jipTime != -1 ) then {
-	player setDamage 1;
+  player setDamage 1;
 };
