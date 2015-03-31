@@ -1,3 +1,3 @@
-if ( !isServer ) exitWith {};
+if (!isServer) exitWith {};
 
 [] spawn AntiVehicleSteal_fnc_VehicleLoop;
