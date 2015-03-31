@@ -26,7 +26,7 @@ if( isNil "Safezone_var_Markers" ) then {
 Safezone_var_Markers pushBack _markerName;
 
 // Clients are done at this point
-if( !isServer ) exitWith { true };
+if(!isServer) exitWith { true };
 
 // Spawn markers to show where the safzeone is, controlled by argument
 _markerRadiusX = getMarkerSize _markerName select 0;
