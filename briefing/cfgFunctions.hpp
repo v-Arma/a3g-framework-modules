@@ -1,6 +1,8 @@
 class Briefing {
   class Functions {
     file = "modules\briefing\functions";
-    class Briefing {};
+    class Briefing {
+      postInit = 1;
+    };
   };
 };
