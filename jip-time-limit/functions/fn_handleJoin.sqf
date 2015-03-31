@@ -1,4 +1,4 @@
-if ( isDedicated ) exitWith {};
+if (!hasInterface) exitWith {};
 
 _jipTime = if ( isNil "JipTimeLimit_var_JipTime" ) then { 
   getNumber (missionConfigFile >> "Modules" >> "JipTimeLimit" >> "JipTimeLimit_var_JipTime")
