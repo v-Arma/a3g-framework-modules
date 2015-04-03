@@ -6,6 +6,7 @@
   - The title of each subclass becomes the title in the briefing menu. Underlines will be replaced with spaces.
   - The order of subclasses determines the order in which the briefing entries show up.
   - Use the attribute 'text' to put in the text of each briefing entry.
+  - Do not split the strings across multiple lines.
 */
 
 
