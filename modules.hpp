@@ -13,6 +13,7 @@
 #include "agm-log\module.hpp"
 #include "anti-loot\module.hpp"
 #include "anti-loot-param\module.hpp"
+#include "anti-reslot\module.hpp"
 #include "anti-vehicle-steal\module.hpp"
 #include "auto-fail\module.hpp"
 #include "briefing\module.hpp"
