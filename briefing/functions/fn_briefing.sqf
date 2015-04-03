@@ -1,17 +1,21 @@
-private ["_briefings"];
+private ["_configPath", "_configClasses"];
+
 if (!hasInterface) exitWith {};
+_configPath = missionConfigFile >> "Modules" >> "Briefing" >> "Settings";
 
-switch (side player) do {
-  case blufor:
-    _briefings = "true" configClasses (missionConfigFile >> "Modules" >> "Briefing" >> "Settings" >> "Blufor");
-  case opfor:
-    _briefings = "true" configClasses (missionConfigFile >> "Modules" >> "Briefing" >> "Settings" >> "Opfor");
-  case indfor:
-    _briefings = "true" configClasses (missionConfigFile >> "Modules" >> "Briefing" >> "Settings" >> "Indfor");
-  case civilians:
-    _briefings = "true" configClasses (missionConfigFile >> "Modules" >> "Briefing" >> "Settings" >> "Civilian");
+[_configPath, "Everyone"] call Briefing_fnc_DisassembleConfig;
+
+switch (true) do {
+  case (side player == blufor): {
+    [_configPath, "Blufor"] call Briefing_fnc_DisassembleConfig;
+  };
+  case (side player == opfor): {
+    [_configPath, "Opfor"] call Briefing_fnc_DisassembleConfig;
+  };
+  case (side player == independent): {
+    [_configPath, "Independent"] call Briefing_fnc_DisassembleConfig;
+  };
+  case (side player == civilian): {
+    [_configPath, "Civilian"] call Briefing_fnc_DisassembleConfig;
+  };
 };
-
-{
-  player createDiaryRecord ["Diary", ["Title", getText _x]];
-} forEach _briefings;

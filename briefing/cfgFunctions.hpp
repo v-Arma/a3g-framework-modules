@@ -4,5 +4,7 @@ class Briefing {
     class Briefing {
       postInit = 1;
     };
+    class DisassembleConfig {};
+    class WriteBriefingEntry {};
   };
 };
