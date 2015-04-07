@@ -9,7 +9,7 @@ _deleted = false;
 {
   // Check if projectile is inside safe zone
   if( _projectile distance getMarkerPos _x < ( getMarkerSize _x ) select 0) then {
-    hint "You can not use weapons inside protection zones!";
+    ["Safezone", ["Safezone", "You can not use weapons inside a safe zone!"]] call bis_fnc_showNotification;
     deleteVehicle _projectile;
     _deleted = true;
   };
@@ -17,7 +17,7 @@ _deleted = false;
   // Check if projectile will be inside safe zone next frame
   if( !_deleted ) then {
     if(( position _projectile vectorAdd ( velocity _projectile vectorMultiply 0.02 )) distance getMarkerPos _x < ( getMarkerSize _x ) select 0 ) then {
-      hint "You can not fire weapons into a safezone!";
+      ["Safezone", ["Safezone", "You can not fire weapons into a safe zone!"]] call bis_fnc_showNotification;
       deleteVehicle _projectile;
       _deleted = true;
     };
@@ -33,7 +33,7 @@ if( !_deleted ) then {
     waitUntil {
       {
         if(( position _projectile vectorAdd ( velocity _projectile vectorMultiply 0.02 )) distance getMarkerPos _x < ( getMarkerSize _x ) select 0 ) then {
-          hint "You can not fire weapons into a safezone!";
+          ["Safezone", ["Safezone", "You can not fire weapons into a safe zone!"]] call bis_fnc_showNotification;
           deleteVehicle _projectile;
           _deleted = true;
         };

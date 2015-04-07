@@ -20,5 +20,5 @@
 #include "daytime-param\module.hpp"
 #include "jip-time-limit\module.hpp"
 #include "jip-time-limit-param\module.hpp"
-#include "safe-zone\module.hpp"
+#include "safezone\module.hpp"
 #include "title-card\module.hpp"
